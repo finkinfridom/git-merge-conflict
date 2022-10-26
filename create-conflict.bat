@@ -19,9 +19,12 @@ pause
 echo "perform 'git checkout %new_branch_name%"
 call ./steps/04-git-checkout-new-branch.bat %new_branch_name%
 pause
+echo "updating file on %new_branch_name%"
+call ./steps/05-touch-file-on-branch.bat %new_branch_name%
+pause
 echo "committing file on '%new_branch_name%'"
-call ./steps/05-commit-and-push-on-new-branch.bat %new_branch_name%
+call ./steps/06-commit-and-push-on-new-branch.bat %new_branch_name%
 pause
 echo "perform 'git merge origin %main_branch_name%'"
-call ./steps/05-git-merge-main.bat %main_branch_name%
+call ./steps/07-git-merge-main.bat %main_branch_name%
 pause
