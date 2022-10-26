@@ -9,9 +9,10 @@ git pull
 git show-ref refs/heads/%new_branch_name% > .tmp
 set /p has_branch=<.tmp
 del /q .tmp
-if not "%has_branch%" == "" (
-    
+if not "%has_branch%" == "" (    
     git branch -D %new_branch_name%
+    git push --delete %new_branch_name%
+    git pull
 )
 
 pause
