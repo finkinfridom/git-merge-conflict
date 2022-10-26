@@ -5,3 +5,7 @@ if not defined main_branch_name set main_branch_name=main
  
 git checkout %main_branch_name%
 git branch -D %new_branch_name%
+
+git checkout %main_branch_name%
+git reset --hard HEAD~1
+git push --force
