@@ -4,6 +4,10 @@ if not defined new_branch_name set new_branch_name=feat/update-file
 set main_branch_name=%2
 if not defined main_branch_name set main_branch_name=main
 
+git checkout %new_branch_name%
+git add .
+git reset --hard
+
 git checkout %main_branch_name%
 git pull
 
