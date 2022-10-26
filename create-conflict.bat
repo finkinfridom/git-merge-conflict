@@ -20,5 +20,5 @@ echo "committing file on '%new_branch_name%'"
 call ./steps/04-commit-and-push.bat %new_branch_name%
 pause
 echo "perform 'git merge origin %main_branch_name%'"
-call ./steps/05-git-merge.bat
+call ./steps/05-git-merge.bat %main_branch_name%
 pause
