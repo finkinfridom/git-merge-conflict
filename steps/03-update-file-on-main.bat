@@ -5,7 +5,7 @@ git checkout %main_branch_name%
 
 echo # [UPDATE] This is going to be the content on %1 > ./conflicting-file.md
 
-git add ./conflicting-file.md
+git add .
 git commit -m "Updated file"
 
-git push origin %main_branch_name%
+git push
