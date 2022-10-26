@@ -1,3 +1,4 @@
+@echo off
 set new_branch_name=%1
 if not defined new_branch_name set new_branch_name=feat/update-file
 set main_branch_name=%2
@@ -11,7 +12,7 @@ set /p has_branch=<.tmp
 del /q .tmp
 if not "%has_branch%" == "" (    
     git branch -D %new_branch_name%
-    git push --delete %new_branch_name%
+    git push origin --delete %new_branch_name%
     git pull
 )
 
