@@ -19,5 +19,7 @@ pause
 
 git checkout %main_branch_name%
 git reset --hard HEAD~1
+
 pause
+
 git push --force
