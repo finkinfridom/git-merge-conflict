@@ -27,4 +27,3 @@ call ./steps/06-commit-and-push-on-new-branch.bat %new_branch_name%
 pause
 echo "####### perform 'git merge origin %main_branch_name%' #######"
 call ./steps/07-git-merge-main.bat %main_branch_name%
-pause
